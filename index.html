@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infinity Books</title>
+    <link rel="shortcut icon" href="assets/Vector.png" type="image/x-icon" />
+
+    <!-- Raleway and Inter fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+        .font-raleway{
+            font-family: "Raleway", sans-serif;
+        }
+        .font-inter{
+            font-family: "Inter", serif;
+        }
+    </style>
+
+    <!-- Link for DaisyUI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind custom configuration -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              'brand': '#0077FF'
+            },
+          },
+        },
+      };
+    </script>
+
+  </head>
+  <body>
+    <header>
+        <!-- Navbar -->
+        <section class="bg-brand">
+            <nav class="w-11/12 mx-auto py-5">
+                <!-- Brand part -->
+                <div class="flex items-center gap-3">
+                    <img class="w-5" src="assets/Vector.png" alt="Brand Logo">
+                    <h3 class="text-white font-bold text-xl">InfinityBooks</h3>
+                </div>
+
+                <!-- Links part -->
+                 
+            </nav>
+        </section>
+    </header>
+    <main></main>
+    <footer></footer>
+  </body>
+</html>
