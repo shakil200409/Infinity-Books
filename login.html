@@ -67,54 +67,58 @@
     </style>
   </head>
   <body class="text-raleway">
-    <section class="min-h-screen flex overflow-hidden">
+    <section class="min-h-screen flex md:overflow-hidden">
       <div
-        class="max-h-screen flex items-center justify-center overflow-hidden mx-auto"
+        class="md:max-h-screen flex flex-col-reverse md:flex-row items-center justify-center md:overflow-hidden mx-auto"
       >
-        <figure class="w-1/2">
+        <figure class="md:w-1/2">
           <img
             class="object-contain w-full h-full"
             src="assets/login.svg"
             alt="Login"
           />
         </figure>
-        <div class="w-1/2 flex flex-col items-center text-center py-10 border">
-          <h2 class="card-title font-bold text-3xl text-brand my-10">
+        <div class="w-11/12 md:w-1/2 flex flex-col items-center text-center py-5 md:py-10">
+          <h2 class="card-title font-bold text-2xl lg:text-3xl text-brand my-3 md:my-4">
             WELCOME BACK!
           </h2>
           <!-- Input Forms -->
-          <div class="text-left flex flex-col gap-5 w-4/5">
-            <label class="flex flex-col gap-3 font-bold" for="Email"
+          <div class="text-left flex flex-col gap-5 w-full md:w-4/5">
+            <label class="flex flex-col gap-1 md:gap-2 lg:gap-3 font-bold" for="Email"
               >Email
               <input
                 type="text"
                 placeholder="Enter Your mail address"
-                class="input input-bordered border-2 py-7 rounded-xl w-full"
+                class="input input-bordered border-2 py-2 md:py-4 lg:py-7 rounded-xl w-full placeholder:text-sm lg:placeholder:text-base"
               />
             </label>
-            <label class="flex flex-col gap-3 font-bold" for="Email"
+            <label class="flex flex-col gap-1 md:gap-2 lg:gap-3 font-bold" for="Password"
               >Password
               <input
                 type="text"
                 placeholder="Enter password"
-                class="input input-bordered border-2 py-7 rounded-xl w-full"
+                class="input input-bordered border-2 py-2 md:py-4 lg:py-7 rounded-xl w-full placeholder:text-sm lg:placeholder:text-base"
               />
             </label>
           </div>
-          <!-- Remember Me -->
-          <div class="flex items-center my-3 gap-52">
-            <div class="form-control">
-              <label class="cursor-pointer label">
-                <input
-                  type="checkbox"
-                  checked="checked"
-                  class="checkbox checkbox-info mr-3"
-                />
-                <span class="label-text text-base">Remember me</span>
-              </label>
+          <!-- Remember & Forget -->
+          <div class="flex items-center justify-between gap-20 md:gap-0 my-3 md:w-3/4">
+            <div class="flex items-center">
+                <input type="checkbox" checked="checked" class="checkbox checkbox-info mr-2" />
+                <span class="label-text text-xs md:text-sm lg:text-base">Remember me</span>
             </div>
-            <span class="font-bold">Forget password?</span>
+            <a href="#" class="font-bold text-xs md:text-sm lg:text-base">Forget password?</a>
           </div>
+          <!-- Buttons -->
+          <div class="w-full md:w-4/5 my-3 md:my-2 lg:my-5 flex flex-col gap-3">
+            <button class="w-full bg-brand py-2 lg:py-3 text-white font-bold text-base md:text-lg lg:text-xl rounded-xl">Log In</button>
+            <span class="text-xs md:text-sm lg:text-base">Or login with</span>
+            <button class="w-full py-2 lg:py-3 font-semibold text-sm md:text-base lg:text-lg rounded-xl flex items-center justify-center gap-2 border border-black">
+              <img class="w-5 md:w-6 lg:w-7" src="https://img.icons8.com/?size=100&id=V5cGWnc9R4xj&format=png&color=000000" alt="Google logo">
+              Sign in with Google
+            </button>
+          </div>
+          <p class="text-xs md:text-sm lg:text-base">Don't you have an account? <a class="text-brand" href="#">Sign up</a></p>        
         </div>
       </div>
     </section>
