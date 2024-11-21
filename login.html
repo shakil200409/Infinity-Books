@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infinity Books</title>
+    <link rel="shortcut icon" href="assets/Vector.png" type="image/x-icon" />
+
+    <!-- Raleway and Inter fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Link to DaisyUI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind custom configuration -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              brand: "#0077FF",
+              secondary: "#fbff00",
+              "light-cyan": "#C1F9FF",
+              mint: "#AAFFD3",
+              "light-purple": "#C6CEFF",
+              "off-white": "#FFFABF",
+              footer: "#0F161E",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Custom Css -->
+    <style>
+      .text-raleway {
+        font-family: "Raleway", sans-serif;
+      }
+      .text-inter {
+        font-family: "Inter", serif;
+      }
+      .bg-header {
+        background-image: url("assets/banner.svg");
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: contain;
+        /* background-size: 100%; */
+      }
+      .bg-welcome {
+        height: 200px;
+        width: 400px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        background-image: url("assets/Vector 2.svg");
+      }
+    </style>
+  </head>
+  <body class="text-raleway">
+    <section class="min-h-screen flex overflow-hidden">
+      <div
+        class="max-h-screen flex items-center justify-center overflow-hidden mx-auto"
+      >
+        <figure class="w-1/2">
+          <img
+            class="object-contain w-full h-full"
+            src="assets/login.svg"
+            alt="Login"
+          />
+        </figure>
+        <div class="w-1/2 flex flex-col items-center text-center py-10 border">
+          <h2 class="card-title font-bold text-3xl text-brand my-10">
+            WELCOME BACK!
+          </h2>
+          <!-- Input Forms -->
+          <div class="text-left flex flex-col gap-5 w-4/5">
+            <label class="flex flex-col gap-3 font-bold" for="Email"
+              >Email
+              <input
+                type="text"
+                placeholder="Enter Your mail address"
+                class="input input-bordered border-2 py-7 rounded-xl w-full"
+              />
+            </label>
+            <label class="flex flex-col gap-3 font-bold" for="Email"
+              >Password
+              <input
+                type="text"
+                placeholder="Enter password"
+                class="input input-bordered border-2 py-7 rounded-xl w-full"
+              />
+            </label>
+          </div>
+          <!-- Remember Me -->
+          <div class="flex items-center my-3 gap-52">
+            <div class="form-control">
+              <label class="cursor-pointer label">
+                <input
+                  type="checkbox"
+                  checked="checked"
+                  class="checkbox checkbox-info mr-3"
+                />
+                <span class="label-text text-base">Remember me</span>
+              </label>
+            </div>
+            <span class="font-bold">Forget password?</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
