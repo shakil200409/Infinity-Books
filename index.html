@@ -71,89 +71,89 @@
       <!-- Navbar -->
       <section class="bg-brand text-white fixed top-0 left-0 right-0 z-10">
         <nav
-          class="w-11/12 mx-auto py-2 md:py-3 flex items-center justify-between"
-        >
-          <!-- Drawer of links for small devices -->
-          <div class="drawer m-0 w-8 md:hidden">
-            <input id="my-drawer" type="checkbox" class="drawer-toggle" />
-            <div class="drawer-content">
-              <!-- Page content here -->
-              <label
-                for="my-drawer"
-                class="btn p-0 bg-transparent border-0 text-white font-black"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="size-7"
+            class="w-11/12 mx-auto py-2 md:py-3 flex items-center justify-between"
+          >
+            <!-- Drawer of links for small devices -->
+            <div class="drawer m-0 w-8 md:hidden">
+              <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+              <div class="drawer-content">
+                <!-- Page content here -->
+                <label
+                  for="my-drawer"
+                  class="btn p-0 bg-transparent border-0 text-white font-black"
                 >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                  />
-                </svg>
-              </label>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-7"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                    />
+                  </svg>
+                </label>
+              </div>
+              <div class="drawer-side">
+                <label
+                  for="my-drawer"
+                  aria-label="close sidebar"
+                  class="drawer-overlay"
+                ></label>
+                <ul
+                  class="menu bg-brand text-white min-h-full p-4 flex flex-col gap-3"
+                >
+                  <!-- Sidebar content here -->
+                  <a class="font-semibold hover:text-black" href="index.html">Home</a>
+                  <a class="font-semibold hover:text-black" href="books.html">Books</a>
+                  <a class="font-semibold hover:text-black" href="contact.html">Contact</a>
+                  <a class="font-semibold hover:text-black" href="about.html">About</a>
+                </ul>
+              </div>
             </div>
-            <div class="drawer-side">
-              <label
-                for="my-drawer"
-                aria-label="close sidebar"
-                class="drawer-overlay"
-              ></label>
-              <ul
-                class="menu bg-brand text-white min-h-full p-4 flex flex-col gap-3"
+            <!-- Brand part -->
+            <div class="flex items-center gap-3">
+              <img class="w-5" src="assets/Vector.png" alt="Brand Logo" />
+              <h3 class="font-bold text-lg md:text-xl">InfinityBooks</h3>
+            </div>
+  
+            <!-- Links part -->
+            <ul
+              class="hidden md:flex items-center gap-5 mr-10 md:text-sm lg:text-base"
+            >
+              <a
+                class="font-semibold hover:font-bold hover:text-secondary"
+                href="index.html"
+                >Home</a
               >
-                <!-- Sidebar content here -->
-                <a class="font-semibold hover:text-black" href="#">Home</a>
-                <a class="font-semibold hover:text-black" href="#">Books</a>
-                <a class="font-semibold hover:text-black" href="#">Contact</a>
-                <a class="font-semibold hover:text-black" href="#">About</a>
-              </ul>
-            </div>
-          </div>
-          <!-- Brand part -->
-          <div class="flex items-center gap-3">
-            <img class="w-5" src="assets/Vector.png" alt="Brand Logo" />
-            <h3 class="font-bold text-lg md:text-xl">InfinityBooks</h3>
-          </div>
-
-          <!-- Links part -->
-          <ul
-            class="hidden md:flex items-center gap-5 mr-10 md:text-sm lg:text-base"
-          >
-            <a
-              class="font-semibold hover:font-bold hover:text-secondary"
-              href="#"
-              >Home</a
+              <a
+                class="font-semibold hover:font-bold hover:text-secondary"
+                href="books.html"
+                >Books</a
+              >
+              <a
+                class="font-semibold hover:font-bold hover:text-secondary"
+                href="contact.html"
+                >Contact</a
+              >
+              <a
+                class="font-semibold hover:font-bold hover:text-secondary"
+                href="about.html"
+                >About</a
+              >
+            </ul>
+  
+            <!-- Login Button -->
+            <button onclick="displayLogin()"
+              class="font-bold text-xs md:text-sm lg:text-base bg-white text-brand px-5 py-2 rounded-full hover:bg-secondary hover:text-black"
             >
-            <a
-              class="font-semibold hover:font-bold hover:text-secondary"
-              href="#"
-              >Books</a
-            >
-            <a
-              class="font-semibold hover:font-bold hover:text-secondary"
-              href="#"
-              >Contact</a
-            >
-            <a
-              class="font-semibold hover:font-bold hover:text-secondary"
-              href="#"
-              >About</a
-            >
-          </ul>
-
-          <!-- Login Button -->
-          <button onclick="displayLogin()"
-            class="font-bold text-xs md:text-sm lg:text-base bg-white text-brand px-5 py-2 rounded-full hover:bg-secondary hover:text-black"
-          >
-            Log In
-          </button>
-        </nav>
+              Log In
+            </button>
+          </nav>
       </section>
     </header>
     <main>
@@ -434,7 +434,7 @@
 
           <!-- View More button -->
           <div class="text-inter">
-            <button
+            <button onclick="displayBooks()"
               class="font-bold text-md md:text-lg lg:text-2xl bg-black text-white px-8 md:px-10 py-3 md:py-4 rounded-full hover:bg-secondary hover:text-black"
             >
               View More
@@ -656,22 +656,22 @@
           >
             <a
               class="font-semibold hover:font-bold hover:text-secondary"
-              href="#"
+              href="index.html"
               >Home</a
             >
             <a
               class="font-semibold hover:font-bold hover:text-secondary"
-              href="#"
+              href="books.html"
               >Books</a
             >
             <a
               class="font-semibold hover:font-bold hover:text-secondary"
-              href="#"
+              href="contact.html"
               >Contact</a
             >
             <a
               class="font-semibold hover:font-bold hover:text-secondary"
-              href="#"
+              href="about.html"
               >About</a
             >
           </ul>
@@ -703,6 +703,6 @@
     </footer>
 
     <!-- JS -->
-     <script src="JS/login.js"></script>
+     <script src="JS/navigation.js"></script>
   </body>
 </html>
