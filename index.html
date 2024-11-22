@@ -197,6 +197,7 @@
 
         <!-- Description part (Welcome) -->
         <section class="py-3 lg:py-10 lg:flex items-stretch gap-10">
+          <!-- Description Content -->
           <div class="lg:w-1/2 py-3 flex flex-col">
             <div
               class="flex flex-col lg:inline items-center text-center lg:text-left"
@@ -225,6 +226,7 @@
               Let me know if this works for you!
             </p>
           </div>
+          <!-- Description Image -->
           <div class="lg:w-1/2 p-3 flex items-stretch">
             <!-- Left side -->
             <div class="w-1/3 h-full flex flex-col justify-between left-side">
@@ -328,7 +330,7 @@
                   <h2 class="card-title">Don Quixote</h2>
                   <p>Miguel de Cervantes</p>
                 </div>
-                <button
+                <button onclick="showBook()"
                   class="font-semibold text-xs md:text-sm lg:text-base bg-white text-brand px-3 py-2 rounded-lg hover:bg-secondary hover:text-black"
                 >
                   Read More
@@ -347,7 +349,7 @@
                   <h2 class="card-title">Great Gatsby</h2>
                   <p>F. Scott Fitzgerald</p>
                 </div>
-                <button
+                <button onclick="showBook()"
                   class="font-semibold text-xs md:text-sm lg:text-base bg-white text-brand px-3 py-2 rounded-lg hover:bg-secondary hover:text-black"
                 >
                   Read More
@@ -366,7 +368,7 @@
                   <h2 class="card-title">Moby-Dick</h2>
                   <p>Herman Melville</p>
                 </div>
-                <button
+                <button onclick="showBook()"
                   class="font-semibold text-xs md:text-sm lg:text-base bg-white text-brand px-3 py-2 rounded-lg hover:bg-secondary hover:text-black"
                 >
                   Read More
@@ -385,7 +387,7 @@
                   <h2 class="card-title">War and Peace</h2>
                   <p>Miguel de Cervantes</p>
                 </div>
-                <button
+                <button onclick="showBook()"
                   class="font-semibold text-xs md:text-sm lg:text-base bg-white text-brand px-3 py-2 rounded-lg hover:bg-secondary hover:text-black"
                 >
                   Read More
@@ -404,7 +406,7 @@
                   <h2 class="card-title">Don Quixote</h2>
                   <p>Miguel de Cervantes</p>
                 </div>
-                <button
+                <button onclick="showBook()"
                   class="font-semibold text-xs md:text-sm lg:text-base bg-white text-brand px-3 py-2 rounded-lg hover:bg-secondary hover:text-black"
                 >
                   Read More
@@ -423,7 +425,7 @@
                   <h2 class="card-title">Don Quixote</h2>
                   <p>Miguel de Cervantes</p>
                 </div>
-                <button
+                <button onclick="showBook()"
                   class="font-semibold text-xs md:text-sm lg:text-base bg-white text-brand px-3 py-2 rounded-lg hover:bg-black hover:text-white"
                 >
                   Read More
@@ -704,5 +706,6 @@
 
     <!-- JS -->
      <script src="JS/navigation.js"></script>
+     <script src="JS/book.js"></script>
   </body>
 </html>

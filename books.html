@@ -157,7 +157,7 @@
       </section>
     </header>
     <main>
-      <article class="w-11/12 mx-auto flex flex-col gap-10">
+      <article id="books-page" class="w-11/12 mx-auto flex flex-col gap-10">
         <!-- Search section -->
         <section class="flex flex-col items-center gap-10 mb-5">
           <h2
@@ -191,7 +191,7 @@
           </label>
         </section>
         <!-- Categories Button -->
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
+        <section class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
           <button
             class="text-lg md:text-xl lg:text-2xl text-center font-semibold px-10 py-5 rounded-lg border-2 border-brand hover:bg-brand hover:text-white"
           >
@@ -217,9 +217,9 @@
           >
             Audio
           </button>
-        </div>
+        </section>
         <!-- Cards container -->
-        <div
+        <section
           class="md:w-10/12 mx-auto grid grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8 lg:gap-10"
         >
           <!-- Card start -->
@@ -234,7 +234,7 @@
                 <h2 class="card-title">Don Quixote</h2>
                 <p>Miguel de Cervantes</p>
               </div>
-              <button
+              <button onclick="showBook()"
                 class="font-semibold text-xs md:text-sm lg:text-base bg-white text-brand px-3 py-2 rounded-lg hover:bg-secondary hover:text-black"
               >
                 Read More
@@ -253,7 +253,7 @@
                 <h2 class="card-title">Great Gatsby</h2>
                 <p>F. Scott Fitzgerald</p>
               </div>
-              <button
+              <button onclick="showBook()"
                 class="font-semibold text-xs md:text-sm lg:text-base bg-white text-brand px-3 py-2 rounded-lg hover:bg-secondary hover:text-black"
               >
                 Read More
@@ -272,7 +272,7 @@
                 <h2 class="card-title">Moby-Dick</h2>
                 <p>Herman Melville</p>
               </div>
-              <button
+              <button onclick="showBook()"
                 class="font-semibold text-xs md:text-sm lg:text-base bg-white text-brand px-3 py-2 rounded-lg hover:bg-secondary hover:text-black"
               >
                 Read More
@@ -291,7 +291,7 @@
                 <h2 class="card-title">War and Peace</h2>
                 <p>Miguel de Cervantes</p>
               </div>
-              <button
+              <button onclick="showBook()"
                 class="font-semibold text-xs md:text-sm lg:text-base bg-white text-brand px-3 py-2 rounded-lg hover:bg-secondary hover:text-black"
               >
                 Read More
@@ -310,7 +310,7 @@
                 <h2 class="card-title">Don Quixote</h2>
                 <p>Miguel de Cervantes</p>
               </div>
-              <button
+              <button onclick="showBook()"
                 class="font-semibold text-xs md:text-sm lg:text-base bg-white text-brand px-3 py-2 rounded-lg hover:bg-secondary hover:text-black"
               >
                 Read More
@@ -329,7 +329,7 @@
                 <h2 class="card-title">Don Quixote</h2>
                 <p>Miguel de Cervantes</p>
               </div>
-              <button
+              <button onclick="showBook()"
                 class="font-semibold text-xs md:text-sm lg:text-base bg-white text-brand px-3 py-2 rounded-lg hover:bg-black hover:text-white"
               >
                 Read More
@@ -348,7 +348,7 @@
                 <h2 class="card-title">Don Quixote</h2>
                 <p>Miguel de Cervantes</p>
               </div>
-              <button
+              <button onclick="showBook()"
                 class="font-semibold text-xs md:text-sm lg:text-base bg-white text-brand px-3 py-2 rounded-lg hover:bg-secondary hover:text-black"
               >
                 Read More
@@ -367,7 +367,7 @@
                 <h2 class="card-title">Great Gatsby</h2>
                 <p>F. Scott Fitzgerald</p>
               </div>
-              <button
+              <button onclick="showBook()"
                 class="font-semibold text-xs md:text-sm lg:text-base bg-white text-brand px-3 py-2 rounded-lg hover:bg-secondary hover:text-black"
               >
                 Read More
@@ -386,7 +386,7 @@
                 <h2 class="card-title">Moby-Dick</h2>
                 <p>Herman Melville</p>
               </div>
-              <button
+              <button onclick="showBook()"
                 class="font-semibold text-xs md:text-sm lg:text-base bg-white text-brand px-3 py-2 rounded-lg hover:bg-secondary hover:text-black"
               >
                 Read More
@@ -405,7 +405,7 @@
                 <h2 class="card-title">War and Peace</h2>
                 <p>Miguel de Cervantes</p>
               </div>
-              <button
+              <button onclick="showBook()"
                 class="font-semibold text-xs md:text-sm lg:text-base bg-white text-brand px-3 py-2 rounded-lg hover:bg-secondary hover:text-black"
               >
                 Read More
@@ -424,7 +424,7 @@
                 <h2 class="card-title">Don Quixote</h2>
                 <p>Miguel de Cervantes</p>
               </div>
-              <button
+              <button onclick="showBook()"
                 class="font-semibold text-xs md:text-sm lg:text-base bg-white text-brand px-3 py-2 rounded-lg hover:bg-secondary hover:text-black"
               >
                 Read More
@@ -443,14 +443,14 @@
                 <h2 class="card-title">Don Quixote</h2>
                 <p>Miguel de Cervantes</p>
               </div>
-              <button
+              <button onclick="showBook()"
                 class="font-semibold text-xs md:text-sm lg:text-base bg-white text-brand px-3 py-2 rounded-lg hover:bg-black hover:text-white"
               >
                 Read More
               </button>
             </div>
           </div>
-        </div>
+        </section>
       </article>
     </main>
     <footer class="bg-footer text-white mt-10">
@@ -515,5 +515,6 @@
     </footer>
     <!-- Js -->
     <script src="JS/navigation.js"></script>
+    <script src="JS/book.js"></script>
   </body>
 </html>
