@@ -1,10 +1,6 @@
-// showBook()
 const bookPage= document.getElementById('books-page');
-
-
+// showBook()
 function showBook(){
-    console.log('clicked')
-    console.log(bookPage);
     bookPage.innerHTML= '';
     const bookDescription = document.createElement('article');
     bookDescription.classList = 'w-11/12 mx-auto mt-24 text-raleway'
@@ -158,7 +154,4 @@ function showBook(){
     `
 
     bookPage.append(bookDescription);
-    // bookPage.forEach(element => {
-    //     // console.log(element)
-    // });
 }

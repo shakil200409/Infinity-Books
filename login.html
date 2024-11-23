@@ -89,14 +89,14 @@
               <input name="email" id="email"
                 type="text"
                 placeholder="Enter Your mail address"
-                class="input input-bordered border-2 py-2 md:py-4 lg:py-7 rounded-xl w-full placeholder:text-sm lg:placeholder:text-base"/>
+                class="input input-bordered border-2 py-2 md:py-4 lg:py-7 rounded-md md:rounded-lg lg:rounded-xl w-full placeholder:text-sm lg:placeholder:text-base"/>
             </label>
             <label class="flex flex-col gap-1 md:gap-2 lg:gap-3 font-bold" for="Password"
               >Password
               <input id="password"
                 type="text"
                 placeholder="Enter password"
-                class="input input-bordered border-2 py-2 md:py-4 lg:py-7 rounded-xl w-full placeholder:text-sm lg:placeholder:text-base"/>
+                class="input input-bordered border-2 py-2 md:py-4 lg:py-7 rounded-md md:rounded-lg lg:rounded-xl w-full placeholder:text-sm lg:placeholder:text-base"/>
             </label>
           </form>
           <!-- Remember & Forget -->
@@ -109,19 +109,20 @@
           </div>
           <!-- Buttons -->
           <div class="w-full md:w-4/5 my-3 md:my-2 lg:my-5 flex flex-col gap-3">
-            <button onclick="accessUser()" class="w-full bg-brand py-2 lg:py-3 text-white font-bold text-base md:text-lg lg:text-xl rounded-xl">Log In</button>
+            <button onclick="login()" class="w-full bg-brand py-2 lg:py-3 text-white font-bold text-base md:text-lg lg:text-xl rounded-md md:rounded-lg lg:rounded-xl">Log In</button>
             <span class="text-xs md:text-sm lg:text-base">Or login with</span>
-            <button class="w-full py-2 lg:py-3 font-semibold text-sm md:text-base lg:text-lg rounded-xl flex items-center justify-center gap-2 border border-black">
+            <button class="w-full py-2 lg:py-3 font-semibold text-sm md:text-base lg:text-lg rounded-md md:rounded-lg lg:rounded-xl flex items-center justify-center gap-2 border border-black">
               <img class="w-5 md:w-6 lg:w-7" src="https://img.icons8.com/?size=100&id=V5cGWnc9R4xj&format=png&color=000000" alt="Google logo">
               Sign in with Google
             </button>
           </div>
-          <p class="text-xs md:text-sm lg:text-base">Don't you have an account? <a class="text-brand" href="#">Sign up</a></p>        
+          <p class="text-xs md:text-sm lg:text-base">Don't you have an account? <a onclick="register()" class="text-brand" href="#">Sign up</a></p>        
         </div>
       </div>
     </section>
 
     <!-- Js -->
      <script src="JS/navigation.js"></script>
+     <script src="JS/signUp.js"></script>
   </body>
 </html>

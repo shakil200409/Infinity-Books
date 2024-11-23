@@ -1,4 +1,4 @@
-function handleLogin() {
+function accessUser() {
   // After successful login, retrieve the stored URL
   var lastPage = localStorage.getItem("lastPage");
   // Redirect to the stored URL or default to the homepage
@@ -18,18 +18,16 @@ function displayLogin() {
   window.location.href = "login.html";
 }
 
-// accessUser()
-function accessUser() {
+// login()
+function login() {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
   let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   if (emailPattern.test(email) && password !== "") {
-    handleLogin()
+    accessUser()
     // window.location.href = "index.html";
-  } else if (password === "") {
-    alert("Please enter correct Email or Password");
   } else {
-    alert("Please Enter a valid Email");
+    alert("Please enter correct Email or Password");
   }
 }
 
@@ -37,3 +35,5 @@ function accessUser() {
 function displayBooks() {
   console.log("Displayed");
 }
+
+
