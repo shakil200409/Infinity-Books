@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About-Infinity Books</title>
+    <link rel="shortcut icon" href="assets/Vector.png" type="image/x-icon" />
+
+    <!-- Raleway and Inter fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Link to DaisyUI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind custom configuration -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              brand: "#0077FF",
+              secondary: "#fbff00",
+              "light-cyan": "#C1F9FF",
+              mint: "#AAFFD3",
+              "light-purple": "#C6CEFF",
+              "off-white": "#FFFABF",
+              footer: "#0F161E",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Custom Css -->
+    <style>
+      .text-raleway {
+        font-family: "Raleway", sans-serif;
+      }
+      .text-inter {
+        font-family: "Inter", serif;
+      }
+      .bg-header {
+        background-image: url("assets/banner.svg");
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: contain;
+        /* background-size: 100%; */
+      }
+      .bg-welcome {
+        height: 200px;
+        width: 400px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        background-image: url("assets/Vector 2.svg");
+      }
+    </style>
+  </head>
+  <body>
+    <header class="mb-20">
+      <!-- Navbar -->
+      <section class="bg-brand text-white fixed top-0 left-0 right-0 z-10">
+        <nav
+          class="w-11/12 mx-auto py-2 md:py-3 flex items-center justify-between"
+        >
+          <!-- Drawer of links for small devices -->
+          <div class="drawer m-0 w-8 md:hidden">
+            <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+            <div class="drawer-content">
+              <!-- Page content here -->
+              <label
+                for="my-drawer"
+                class="btn p-0 bg-transparent border-0 text-white font-black"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-7"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+              </label>
+            </div>
+            <div class="drawer-side">
+              <label
+                for="my-drawer"
+                aria-label="close sidebar"
+                class="drawer-overlay"
+              ></label>
+              <ul
+                class="menu bg-brand text-white min-h-full p-4 flex flex-col gap-3"
+              >
+                <!-- Sidebar content here -->
+                <a class="font-semibold hover:text-black" href="index.html"
+                  >Home</a
+                >
+                <a class="font-semibold hover:text-black" href="books.html"
+                  >Books</a
+                >
+                <a class="font-semibold hover:text-black" href="contact.html"
+                  >Contact</a
+                >
+                <a class="font-semibold hover:text-black" href="about.html"
+                  >About</a
+                >
+              </ul>
+            </div>
+          </div>
+          <!-- Brand part -->
+          <div class="flex items-center gap-3">
+            <img class="w-5" src="assets/Vector.png" alt="Brand Logo" />
+            <h3 class="font-bold text-lg md:text-xl">InfinityBooks</h3>
+          </div>
+
+          <!-- Links part -->
+          <ul
+            class="hidden md:flex items-center gap-5 mr-10 md:text-sm lg:text-base"
+          >
+            <a
+              class="font-semibold hover:font-bold hover:text-secondary"
+              href="index.html"
+              >Home</a
+            >
+            <a
+              class="font-semibold hover:font-bold hover:text-secondary"
+              href="books.html"
+              >Books</a
+            >
+            <a
+              class="font-semibold hover:font-bold hover:text-secondary"
+              href="contact.html"
+              >Contact</a
+            >
+            <a
+              class="font-semibold hover:font-bold hover:text-secondary"
+              href="about.html"
+              >About</a
+            >
+          </ul>
+
+          <!-- Login Button -->
+          <button
+            onclick="displayLogin()"
+            class="font-bold text-xs md:text-sm lg:text-base bg-white text-brand px-5 py-2 rounded-full hover:bg-secondary hover:text-black"
+          >
+            Log In
+          </button>
+        </nav>
+      </section>
+    </header>
+    <main class="w-1/2 mx-auto text-raleway">
+      <!-- Team Content -->
+      <div class="text-center">
+        <h1 class="font-bold text-3xl text-center">Syntax Savior</h1>
+        <p class="text-xl text-inter text-brand">Industrial attachement from DIPTI</p>
+      </div>
+      <!-- Team container -->
+      <div class="md:flex flex-col gap-10 text-inter">
+        <div class="flex items-center gap-5 mt-10">
+          <img
+
+            class="h-36 w-32 object-cover"
+            src="assets/team/Remon.svg"
+            alt="Member image"
+          />
+          <!-- content -->
+          <div class="text-center mt-5">
+            <h4 class="text-xl md:text-2xl lg:text-3xl font-bold">
+              <span class="text-brand">Rakibul</span> Islam
+            </h4>
+            <p class="text-base md:text-md lg:text-lg">UI/UX Designer</p>
+            <span>Roll: 577900</span>
+            <!-- Links -->
+            <div class="w-40 mx-auto flex items-center justify-between p-3">
+              <a
+                class="w-[30px] lg:w-[35px]"
+                href="https://github.com/rakibulislamremon"
+              >
+                <img
+                  class="w-full object-cover"
+                  src="https://img.icons8.com/?size=100&id=106562&format=png&color=000000"
+                  alt="Github"
+                />
+              </a>
+              <a
+                class="w-[30px] lg:w-[35px]"
+                href="https://www.linkedin.com/in/shakil-ahmed-linked"
+              >
+                <img
+                  class="w-full object-cover"
+                  src="https://img.icons8.com/?size=100&id=98960&format=png&color=000000"
+                  alt="LinkedIn"
+                />
+              </a>
+              <a
+                class="w-[30px] lg:w-[35px]"
+                href="https://www.facebook.com/shakilahmed.032004/"
+              >
+                <img
+                  class="w-full object-cover"
+                  src="https://img.icons8.com/?size=100&id=118466&format=png&color=000000"
+                  alt="Facebook"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-row-reverse items-center gap-5 mt-10">
+          <img
+
+            class="h-36 w-32 object-cover"
+            src="assets/team/Shakil.jpg"
+            alt="Member image"
+          />
+          <!-- Content -->
+          <div class="text-center mt-5">
+            <h4 class="text-xl md:text-2xl lg:text-3xl font-bold">
+              <span class="text-brand">Shakil</span> Ahmed
+            </h4>
+            <p text-base md:text-md lg:class="text-lg">
+              Web Developer (Frontend)
+            </p>
+            <span>Roll: 577863</span>
+            <!-- Links -->
+            <div class="w-40 mx-auto flex items-center justify-between p-3">
+              <a
+                class="w-[30px] lg:w-[35px]"
+                href="https://github.com/shakil200409"
+              >
+                <img
+                  class="w-full object-cover"
+                  src="https://img.icons8.com/?size=100&id=106562&format=png&color=000000"
+                  alt="Github"
+                />
+              </a>
+              <a
+                class="w-[30px] lg:w-[35px]"
+                href="https://www.linkedin.com/in/shakil-ahmed-linked"
+              >
+                <img
+                  class="w-full object-cover"
+                  src="https://img.icons8.com/?size=100&id=98960&format=png&color=000000"
+                  alt="LinkedIn"
+                />
+              </a>
+              <a
+                class="w-[30px] lg:w-[35px]"
+                href="https://www.facebook.com/shakilahmed.032004/"
+              >
+                <img
+                  class="w-full object-cover"
+                  src="https://img.icons8.com/?size=100&id=118466&format=png&color=000000"
+                  alt="Facebook"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-5 mt-10">
+          <img
+
+            class="h-36 w-32 object-cover"
+            src="assets/user.png"
+            alt="Member image"
+          />
+          <!-- Content -->
+          <div class="text-center mt-5">
+            <h4 class="text-xl md:text-2xl lg:text-3xl font-bold">
+              <span class="text-brand">Fahim</span> Chowdhury
+            </h4>
+            <p text-base md:text-md lg:class="text-lg">
+              Web Developer (Backend)
+            </p>
+            <span>Roll: 577805</span>
+            <!-- Links -->
+            <div class="w-40 mx-auto flex items-center justify-between p-3">
+              <a class="w-[30px] lg:w-[35px]" href="#">
+                <img
+                  class="w-full object-cover"
+                  src="https://img.icons8.com/?size=100&id=106562&format=png&color=000000"
+                  alt="Github"
+                />
+              </a>
+              <a
+                class="w-[30px] lg:w-[35px]"
+                href="https://www.linkedin.com/in/shakil-ahmed-linked"
+              >
+                <img
+                  class="w-full object-cover"
+                  src="https://img.icons8.com/?size=100&id=98960&format=png&color=000000"
+                  alt="LinkedIn"
+                />
+              </a>
+              <a
+                class="w-[30px] lg:w-[35px]"
+                href="https://www.facebook.com/shakilahmed.032004/"
+              >
+                <img
+                  class="w-full object-cover"
+                  src="https://img.icons8.com/?size=100&id=118466&format=png&color=000000"
+                  alt="Facebook"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

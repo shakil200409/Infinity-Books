@@ -33,7 +33,10 @@ function login() {
 
 // displayBooks()
 function displayBooks() {
-  console.log("Displayed");
+  window.location.href = "books.html";
 }
 
-
+// showCategoryItem()
+function showCategoryItem(){
+  
+}

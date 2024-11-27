@@ -35,7 +35,7 @@
               mint: "#AAFFD3",
               "light-purple": "#C6CEFF",
               "off-white": "#FFFABF",
-              'footer':'#0F161E'
+              footer: "#0F161E",
             },
           },
         },
@@ -71,89 +71,98 @@
       <!-- Navbar -->
       <section class="bg-brand text-white fixed top-0 left-0 right-0 z-10">
         <nav
-            class="w-11/12 mx-auto py-2 md:py-3 flex items-center justify-between"
+          class="w-11/12 mx-auto py-2 md:py-3 flex items-center justify-between"
+        >
+          <!-- Drawer of links for small devices -->
+          <div class="drawer m-0 w-8 md:hidden">
+            <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+            <div class="drawer-content">
+              <!-- Page content here -->
+              <label
+                for="my-drawer"
+                class="btn p-0 bg-transparent border-0 text-white font-black"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-7"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+              </label>
+            </div>
+            <div class="drawer-side">
+              <label
+                for="my-drawer"
+                aria-label="close sidebar"
+                class="drawer-overlay"
+              ></label>
+              <ul
+                class="menu bg-brand text-white min-h-full p-4 flex flex-col gap-3"
+              >
+                <!-- Sidebar content here -->
+                <a class="font-semibold hover:text-black" href="index.html"
+                  >Home</a
+                >
+                <a class="font-semibold hover:text-black" href="books.html"
+                  >Books</a
+                >
+                <a class="font-semibold hover:text-black" href="contact.html"
+                  >Contact</a
+                >
+                <a class="font-semibold hover:text-black" href="about.html"
+                  >About</a
+                >
+              </ul>
+            </div>
+          </div>
+          <!-- Brand part -->
+          <div class="flex items-center gap-3">
+            <img class="w-5" src="assets/Vector.png" alt="Brand Logo" />
+            <h3 class="font-bold text-lg md:text-xl">InfinityBooks</h3>
+          </div>
+
+          <!-- Links part -->
+          <ul
+            class="hidden md:flex items-center gap-5 mr-10 md:text-sm lg:text-base"
           >
-            <!-- Drawer of links for small devices -->
-            <div class="drawer m-0 w-8 md:hidden">
-              <input id="my-drawer" type="checkbox" class="drawer-toggle" />
-              <div class="drawer-content">
-                <!-- Page content here -->
-                <label
-                  for="my-drawer"
-                  class="btn p-0 bg-transparent border-0 text-white font-black"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="size-7"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                    />
-                  </svg>
-                </label>
-              </div>
-              <div class="drawer-side">
-                <label
-                  for="my-drawer"
-                  aria-label="close sidebar"
-                  class="drawer-overlay"
-                ></label>
-                <ul
-                  class="menu bg-brand text-white min-h-full p-4 flex flex-col gap-3"
-                >
-                  <!-- Sidebar content here -->
-                  <a class="font-semibold hover:text-black" href="index.html">Home</a>
-                  <a class="font-semibold hover:text-black" href="books.html">Books</a>
-                  <a class="font-semibold hover:text-black" href="contact.html">Contact</a>
-                  <a class="font-semibold hover:text-black" href="about.html">About</a>
-                </ul>
-              </div>
-            </div>
-            <!-- Brand part -->
-            <div class="flex items-center gap-3">
-              <img class="w-5" src="assets/Vector.png" alt="Brand Logo" />
-              <h3 class="font-bold text-lg md:text-xl">InfinityBooks</h3>
-            </div>
-  
-            <!-- Links part -->
-            <ul
-              class="hidden md:flex items-center gap-5 mr-10 md:text-sm lg:text-base"
+            <a
+              class="font-semibold hover:font-bold hover:text-secondary"
+              href="index.html"
+              >Home</a
             >
-              <a
-                class="font-semibold hover:font-bold hover:text-secondary"
-                href="index.html"
-                >Home</a
-              >
-              <a
-                class="font-semibold hover:font-bold hover:text-secondary"
-                href="books.html"
-                >Books</a
-              >
-              <a
-                class="font-semibold hover:font-bold hover:text-secondary"
-                href="contact.html"
-                >Contact</a
-              >
-              <a
-                class="font-semibold hover:font-bold hover:text-secondary"
-                href="about.html"
-                >About</a
-              >
-            </ul>
-  
-            <!-- Login Button -->
-            <button onclick="displayLogin()"
-              class="font-bold text-xs md:text-sm lg:text-base bg-white text-brand px-5 py-2 rounded-full hover:bg-secondary hover:text-black"
+            <a
+              class="font-semibold hover:font-bold hover:text-secondary"
+              href="books.html"
+              >Books</a
             >
-              Log In
-            </button>
-          </nav>
+            <a
+              class="font-semibold hover:font-bold hover:text-secondary"
+              href="contact.html"
+              >Contact</a
+            >
+            <a
+              class="font-semibold hover:font-bold hover:text-secondary"
+              href="about.html"
+              >About</a
+            >
+          </ul>
+
+          <!-- Login Button -->
+          <button
+            onclick="displayLogin()"
+            class="font-bold text-xs md:text-sm lg:text-base bg-white text-brand px-5 py-2 rounded-full hover:bg-secondary hover:text-black"
+          >
+            Log In
+          </button>
+        </nav>
       </section>
     </header>
     <main>
@@ -288,11 +297,13 @@
           <!-- Categories Button -->
           <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
             <button
+              onclick="showCategoryItem()"
               class="text-lg md:text-xl lg:text-2xl text-center font-semibold px-10 py-5 rounded-lg border-2 border-brand hover:bg-brand hover:text-white"
             >
               All Release
             </button>
             <button
+              onclick="showCategoryItem()"
               class="text-lg md:text-xl lg:text-2xl text-center font-semibold px-10 py-5 rounded-lg border-2 border-brand hover:bg-brand hover:text-white"
             >
               New
@@ -300,22 +311,25 @@
             <button
               class="text-lg md:text-xl lg:text-2xl text-center font-semibold px-10 py-5 rounded-lg border-2 border-brand hover:bg-brand hover:text-white"
             >
-              Videos
+              Thriller
             </button>
             <button
+              onclick="showCategoryItem()"
               class="text-lg md:text-xl lg:text-2xl text-center font-semibold px-10 py-5 rounded-lg border-2 border-brand hover:bg-brand hover:text-white"
             >
               Magazines
             </button>
             <button
+              onclick="showCategoryItem()"
               class="text-lg md:text-xl lg:text-2xl text-center font-semibold px-10 py-5 rounded-lg border-2 border-brand hover:bg-brand hover:text-white"
             >
-              Audio
+              History
             </button>
           </div>
 
           <!-- Cards container -->
           <div
+            id="cardsContainer"
             class="md:w-10/12 mx-auto grid grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8 lg:gap-10"
           >
             <!-- Card start -->
@@ -330,10 +344,13 @@
                   <h2 class="card-title">Don Quixote</h2>
                   <p>Miguel de Cervantes</p>
                 </div>
-                <button onclick="showBook()"
+                <button
+                  onclick="showBook()"
                   class="font-semibold text-xs md:text-sm lg:text-base bg-white text-brand px-3 py-2 rounded-lg hover:bg-secondary hover:text-black"
                 >
-                  <a href="book-info.html"><a href="book-info.html">Read More</a></a>
+                  <a href="book-info.html"
+                    ><a href="book-info.html">Read More</a></a
+                  >
                 </button>
               </div>
             </div>
@@ -349,7 +366,8 @@
                   <h2 class="card-title">Great Gatsby</h2>
                   <p>F. Scott Fitzgerald</p>
                 </div>
-                <button onclick="showBook()"
+                <button
+                  onclick="showBook()"
                   class="font-semibold text-xs md:text-sm lg:text-base bg-white text-brand px-3 py-2 rounded-lg hover:bg-secondary hover:text-black"
                 >
                   <a href="book-info.html">Read More</a>
@@ -368,7 +386,8 @@
                   <h2 class="card-title">Moby-Dick</h2>
                   <p>Herman Melville</p>
                 </div>
-                <button onclick="showBook()"
+                <button
+                  onclick="showBook()"
                   class="font-semibold text-xs md:text-sm lg:text-base bg-white text-brand px-3 py-2 rounded-lg hover:bg-secondary hover:text-black"
                 >
                   <a href="book-info.html">Read More</a>
@@ -387,7 +406,8 @@
                   <h2 class="card-title">War and Peace</h2>
                   <p>Miguel de Cervantes</p>
                 </div>
-                <button onclick="showBook()"
+                <button
+                  onclick="showBook()"
                   class="font-semibold text-xs md:text-sm lg:text-base bg-white text-brand px-3 py-2 rounded-lg hover:bg-secondary hover:text-black"
                 >
                   <a href="book-info.html">Read More</a>
@@ -406,7 +426,8 @@
                   <h2 class="card-title">Don Quixote</h2>
                   <p>Miguel de Cervantes</p>
                 </div>
-                <button onclick="showBook()"
+                <button
+                  onclick="showBook()"
                   class="font-semibold text-xs md:text-sm lg:text-base bg-white text-brand px-3 py-2 rounded-lg hover:bg-secondary hover:text-black"
                 >
                   <a href="book-info.html">Read More</a>
@@ -425,7 +446,8 @@
                   <h2 class="card-title">Don Quixote</h2>
                   <p>Miguel de Cervantes</p>
                 </div>
-                <button onclick="showBook()"
+                <button
+                  onclick="showBook()"
                   class="font-semibold text-xs md:text-sm lg:text-base bg-white text-brand px-3 py-2 rounded-lg hover:bg-black hover:text-white"
                 >
                   <a href="book-info.html">Read More</a>
@@ -435,8 +457,9 @@
           </div>
 
           <!-- View More button -->
-          <div class="text-inter">
-            <button onclick="displayBooks()"
+          <div id="viewMoreBtn" class="text-inter">
+            <button
+              onclick="displayBooks()"
               class="font-bold text-md md:text-lg lg:text-2xl bg-black text-white px-8 md:px-10 py-3 md:py-4 rounded-full hover:bg-secondary hover:text-black"
             >
               View More
@@ -446,7 +469,7 @@
       </article>
 
       <!-- Team part -->
-      <section class="py-3 my-10 md:py-10 lg:py-20 bg-[#f2fcff]">
+      <section class="my-10 py-10 lg:py-20 bg-[#f2fcff]">
         <div class="w-11/12 mx-auto">
           <!-- Team Title -->
           <h2 class="text-center font-bold text-2xl md:text-4xl lg:text-5xl">
@@ -578,7 +601,8 @@
               <a href="#slide2" class="btn btn-circle">❯</a>
             </div>
           </div>
-          <div id="slide2"
+          <div
+            id="slide2"
             class="hidden md:inline carousel-item relative w-full"
           >
             <div class="w-full md:flex gap-10 justify-center">
@@ -645,17 +669,23 @@
     </main>
     <footer class="bg-footer text-white mt-10">
       <section class="w-11/12 mx-auto py-3 md:py-10">
-        <div class="flex flex-col md:flex-row gap-5 items-center justify-between border-b-2 border-white py-10"> 
+        <div
+          class="flex flex-col md:flex-row gap-5 items-center justify-between border-b-2 border-white py-10"
+        >
           <!-- Brand part -->
-          <span class="flex items-center gap-3 text-lg md:text-xl lg:text-2xl font-bold"> 
-            <img class="w-6 md:w-7 lg:w-8 object-cover" src="assets/Vector.png" alt="Logo">
+          <span
+            class="flex items-center gap-3 text-lg md:text-xl lg:text-2xl font-bold"
+          >
+            <img
+              class="w-6 md:w-7 lg:w-8 object-cover"
+              src="assets/Vector.png"
+              alt="Logo"
+            />
             InfinityBooks
           </span>
 
           <!-- Links part -->
-          <ul 
-            class="flex items-center gap-8 md:text-sm lg:text-base"
-          >
+          <ul class="flex items-center gap-8 md:text-sm lg:text-base">
             <a
               class="font-semibold hover:font-bold hover:text-secondary"
               href="index.html"
@@ -679,27 +709,57 @@
           </ul>
         </div>
         <!-- CopyRight Section -->
-        <div class="my-5 flex flex-col md:flex-row gap-5 items-center justify-between">
-          <p class="text-xs md:text-sm lg:text-base">All Rights Reserved By &copy InfinityBooks</p>
+        <div
+          class="my-5 flex flex-col md:flex-row gap-5 items-center justify-between"
+        >
+          <p class="text-xs md:text-sm lg:text-base">
+            All Rights Reserved By &copy InfinityBooks
+          </p>
           <!-- Social Icons -->
           <div class="flex items-center gap-5">
             <!-- Facebook -->
-             <a href="#"> 
-              <img class="w-10 object-cover" src="https://img.icons8.com/?size=100&id=uLWV5A9vXIPu&format=png&color=000000" alt="Facebook">
-             </a>  
-             <!-- Twitter -->
-              <a href="#">
-                <img class="w-10 object-cover" src="https://img.icons8.com/?size=100&id=5MQ0gPAYYx7a&format=png&color=000000" alt="TwitterX">
-              </a>
-             <!-- Instagram -->
-              <a href="#">
-                <img class="w-10 object-cover" src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000" alt="Instagram">
-              </a>
-              <!-- LinkedIn -->
-              <a href="#">
-                <img class="w-10 object-cover" src="https://img.icons8.com/?size=100&id=xuvGCOXi8Wyg&format=png&color=000000" alt="LinkedIn">
-              </a>
+            <a href="#">
+              <img
+                class="w-10 object-cover"
+                src="https://img.icons8.com/?size=100&id=uLWV5A9vXIPu&format=png&color=000000"
+                alt="Facebook"
+              />
+            </a>
+            <!-- Twitter -->
+            <a href="#">
+              <img
+                class="w-10 object-cover"
+                src="https://img.icons8.com/?size=100&id=5MQ0gPAYYx7a&format=png&color=000000"
+                alt="TwitterX"
+              />
+            </a>
+            <!-- Instagram -->
+            <a href="#">
+              <img
+                class="w-10 object-cover"
+                src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000"
+                alt="Instagram"
+              />
+            </a>
+            <!-- LinkedIn -->
+            <a href="#">
+              <img
+                class="w-10 object-cover"
+                src="https://img.icons8.com/?size=100&id=xuvGCOXi8Wyg&format=png&color=000000"
+                alt="LinkedIn"
+              />
+            </a>
           </div>
+        </div>
+
+        <!-- Design and Developement -->
+        <div class="text-center md:mt-10 pt-5">
+          <h5 class="text-xs lg:text-sm">
+            Design & Developed By
+            <a href="team.html" class="text-brand cursor-pointer"
+              >Syntex Savior</a
+            >
+          </h5>
         </div>
       </section>
     </footer>
